@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { BooksContext } from './BooksContext';
+import { BooksContext } from '../Components/BooksContext';
 import Book from './Book';
 
 export default function Books() {
@@ -10,7 +10,7 @@ export default function Books() {
         <div className="books">
 
             {
-                books.map(book => <Book key={book.id} book={book} />)
+                books.map(book => book.show ? <Book key={book.id} book={book} /> : null)
             }
 
         </div>

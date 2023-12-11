@@ -3,6 +3,7 @@ import { BooksContext } from '../Components/BooksContext';
 
 import Books from './Books';
 import Loading from './Loading';
+import Top from './Top';
 
 export default function Layout() {
 
@@ -10,6 +11,7 @@ export default function Layout() {
 
     return (
         <>
+            <Top />
             {
                 books === null
                 ? <Loading />

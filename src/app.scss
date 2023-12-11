@@ -1,8 +1,8 @@
-body{
-
+body {
   color: white;
   margin: 0;
 }
+
 .app {
   display: flex;
   justify-content: center;
@@ -10,7 +10,9 @@ body{
 
   .bin {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     width: 80%;
     background-color: #282c34;
     min-height: 100vh;
@@ -81,7 +83,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    gap: 10px;
+    gap: 30px;
 
     .book {
       display: flex;
@@ -91,9 +93,10 @@ body{
       width: 200px;
       height: 400px;
       background-color: skyblue;
+      position: relative;
+      margin-top: 60px;
 
       &__image {
-        height: 170px;
         img {
           height: auto;
         }
@@ -103,14 +106,76 @@ body{
         font-size: 16px;
         height: 40px;
         overflow: hidden;
-        margin-bottom: 10px;
+        margin: 20px 0 10px 0;
+        padding: 0 5px;
       }
 
       &__author {
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        font-size: 20px;
+        margin-bottom: 16px;
       }
 
+      &__type {
+        position: absolute;
+        top: -15px;
+        left: -10px;
+        font-size: 12px;
+        color: darkgreen;
+        padding: 5px 10px;
+        background-color: darkorange;
+        border-radius: 12px;
+      }
+
+      &__price {
+        color: crimson;
+        font-size: 26px;
+        font-weight: bold;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+
+    }
+  }
+  .top {
+    margin-bottom: 40px;
+    width: 100%;
+    h3, h1 {
+      text-align: center;
+    }
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .filter {
+    padding: 20px;
+    &__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    select {
+      width: 300px;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  .sort {
+    padding: 20px;
+    &__buttons {
+      display: flex;
+      gap: 20px;
+    }
+    &__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &__button {
+      font-size: 20px;
+      font-weight: bold;
+      color: skyblue;
+      height: 50px;
+      user-select: none;
     }
   }
 }

@@ -1,1 +1,3 @@
 export const LOAD_FROM_SERVER = 'LOAD_FROM_SERVER';
+export const FILTER_BOOKS = 'FILTER_BOOKS';
+export const SORT_BOOKS = 'SORT_BOOKS';
